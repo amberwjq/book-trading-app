@@ -1,0 +1,24 @@
+<br>
+<div class="container poll-details" >
+    <div class="row" id="details">
+        <div class="col-sm-4">
+               <h3>Poll Name: {{poll.subject}}</h3>
+               <br>
+               <p>created by {{owner}}</p>
+               <br>
+               <h4>I'd like to vote for</h4>
+                    <select class="form-control" ng-model="selectedName" ng-options="x.name for x in options" >
+                            <option value="">-Select one-</option>   
+                    </select>
+                      <br>                   
+                    <button class="btn btn-success .btn-xs" ng-click="vote()">Submit</button> 
+                    <br> 
+                    <br>  
+                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large">Share on Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>                            
+             </div>
+
+             <div class="col-sm-8" id="chart">
+  
+            </div>             
+         </div>
+    </div>

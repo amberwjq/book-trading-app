@@ -1,0 +1,47 @@
+<div class="row" id="tradeList" ng-controller="mvNavBarLoginCtrl">
+      
+    <div class="col-xs-3">
+            <ul class="nav nav-pills nav-stacked">
+                    <li >
+                        <a href="#!book/{{identity.currentUser.username}}">My Books <span class="badge">{{mybooksNumber}}</span></a>                  
+                    </li>      
+                    <li >
+                    
+                        <a href="#!book/cart/{{identity.currentUser.username}}" >My Cart <span class="badge">{{myCartNumber}}</span></a>
+                    </li>
+                    <li > 
+                        <a href="#!book/request/{{identity.currentUser.username}}" >Request Received <span class="badge">{{requesetReceivedNumber}}</span></a>                  
+                    
+                    </li>
+                    <li class="active"> 
+                        <a href="#!book/history/{{identity.currentUser.username}}">Trade Activity</a>                  
+                      
+                    </li>  
+                </ul>
+      </div>
+      <div class="col-xs-9">
+        <div class="list-group" ng-repeat="transaction in myTransaction">
+            <p>Your request of <span class="highlight">{{transaction.book}}</span> was <span class="highlight">{{transaction.transactionStatus}}</span> by {{transaction.owner}} on {{transaction.transactionDate.slice(0,10)}}</p>
+        
+           
+    </div>
+      </div>
+ 
+<!--    
+      <div class="col-xs-9">
+      <div id="myCarts">
+        <table class="table table-striped">
+
+{{myTransaction.length}}
+<tbody>
+    <tr ng-repeat="transaction in myTransaction">
+      <p>Your request of {{transaction.book}} was {{transaction.transactionStatus}} by {{transaction.owner}} on {{transaction.transactionDate}}</p>
+<p>{{transaction.book}}</p>
+    </tr>
+  
+</tbody>
+</table>
+      </div>
+    </div>   -->
+
+</div>

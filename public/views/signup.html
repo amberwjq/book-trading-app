@@ -1,0 +1,45 @@
+
+    <!-- BANNER -->
+<header class="banner">
+
+
+
+
+   	<div class="login">
+<div class="login-box">
+
+      <form class="email-signup" name="signupForm">
+      <div class="u-form-group">
+          <input type="text" placeholder="firstname" name="fname" ng-model="fname" required/>
+          <br>
+          <span id="errormsg" ng-show="signupForm.fname.$touched && signupForm.fname.$invalid">Firstname is required.</span>
+      </div>
+      <div class="u-form-group">
+          <input type="text" placeholder="lastname" name="lname" ng-model="lname" required/>
+          <br>
+          <span id="errormsg" ng-show="signupForm.lname.$touched && signupForm.lname.$invalid">Lastname is required.</span>
+      </div>        
+      <div class="u-form-group">
+        <input type="text" placeholder="username" name="username" ng-model="username" required/>
+        <br>
+        <span id="errormsg" ng-show="signupForm.username.$touched && signupForm.username.$invalid">username is required.</span>
+      </div>
+      <div class="u-form-group">
+        <input type="password" placeholder="Password" name="password " ng-model="password" required/>
+        <br>
+        <span id="errormsg" ng-show="signupForm.password.$touched && signupForm.password.$invalid">password is required.</span>
+      </div>
+      <div class="u-form-group">
+        <input type="password" placeholder="Confirm Password" name="repeat" ng-model="repeat" required/>
+        <br>
+        <span id="errormsg" ng-show="signupForm.repeat.$touched && signupForm.repeat.$invalid">password is required.</span>
+      </div>
+      <div class="u-form-group">
+        <button ng-click="signup()">Sign Up</button>
+      </div>
+    </form>
+
+
+  </div>
+			</div>
+</header>

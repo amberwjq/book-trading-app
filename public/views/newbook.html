@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+       <div class="jumbotran text-center">
+           <h1>Add Book to BookTrading App</h1>
+           <p class="description lead">Find Your Book on Google Book</p>
+           <form class="searchBook input-group" id="searchForm" action=''>
+                <input type="text" class="form-control" ng-model="newBook" placeholder="Search on google book...."></input>	
+               <div class="input-group-btn">
+                 <input type='submit' class="btn btn-success" value='Search' ng-click="searchBook(newBook)"></input>	
+               </div>
+           </form>
+   
+     </div>	
+    </div> 
+  </div>
+  <div class="bookContainer">
+    <div class="media">
+       
+            <ul>
+                <li ng-repeat="book in bookfromapi">
+                  <div class="row">
+                    <div class="col-sm-3" id="bookImage">
+                     
+                        <img src={{book.image}}>
+                        <button class="btn btn-warning btn-add-cart" ng-click="addBook(book)">Add to collection</button>
+  
+  
+                    </div>
+                    <div class="col-sm-9">
+                            
+                    <h4>Title: {{book.title}}</h4>
+                    <p>{{book.subtitle}}</p>
+                    <p>Author :{{book.authors}}</p>
+                    </div>
+                  </div>
+                  
+                      
+                 
+                 
+          
+                 
+                </li>
+                
+              </ul>
+      
+     </div>
+
+ </div>	
+</div>

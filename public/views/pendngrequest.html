@@ -1,0 +1,49 @@
+<div class="row" id="tradeList" ng-controller="mvNavBarLoginCtrl">
+      
+    <div class="col-xs-3">
+        <ul class="nav nav-pills nav-stacked">
+            <li >
+              <a href="#!book/{{identity.currentUser.username}}" >My Books <span class="badge">{{mybooksNumber}}</span></a>                  
+            </li>      
+            <li>
+              
+                <a href="#!book/cart/{{identity.currentUser.username}}" >My Cart <span class="badge">{{myCartNumber}}</span></a>
+            </li>
+            <li class="active"> 
+                <a href="#!book/request/{{identity.currentUser.username}}">Request Received <span class="badge">{{requesetReceivedNumber}}</span></a>                  
+              
+            </li>
+            <li> 
+                <a href="#!book/history/{{identity.currentUser.username}}">Trade Activity</a>                  
+              
+            </li>           
+        </ul>
+      </div>
+    <div class="col-xs-9">
+      <div id="myCarts">
+        <table class="table table-striped">
+<thead>
+  <tr>
+    <th>Book Title</th>
+    <th>Requested By</th>
+
+    <th colspan="2"></th>
+  </tr>
+</thead>
+
+<tbody>
+    <tr ng-repeat="book in requesetReceived">
+      <td>{{book.title}}</td>
+      <td>{{book.buyer}}</td>
+
+
+      <td><a class="btn btn-info" ng-click=approveTrade(book)>Approve</a></td>
+      <td><a class="btn btn-danger" ng-click=denyTrade(book)>Deny</a></td>
+    </tr>
+  
+</tbody>
+</table>
+      </div>
+    </div>  
+
+</div>

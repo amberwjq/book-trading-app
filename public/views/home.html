@@ -1,0 +1,27 @@
+<div class="main-content">
+    
+        <div class="content">
+          <div class="search-container">
+            <form>    
+          <input type="search" placeholder="Search keyword" ng-model="keyword">
+      </form>
+              </div>
+         <div class="books" ng-controller="mvNavBarLoginCtrl">
+         <ul>
+          <li ng-repeat="book in books | filter:keyword">
+            <img src={{book.image}} />
+            <button class="btn btn-warning btn-add-cart" ng-show="identity.isAuthenticated()" ng-click="addToCart(book)">
+                <span class="glyphicon glyphicon-shopping-cart"></span> to cart</button>
+            <div class="overlay">
+              <h4>{{book.title}}</h4>
+              <p>{{book.author}}</p>
+            </div>
+          </li>
+          
+        </ul>
+         
+         </div>
+
+        </div>
+     
+    </div>

@@ -1,0 +1,39 @@
+
+
+    <!-- BANNER -->
+    <header class="banner">
+        <div class="login">
+   <div class="login-box">
+
+      <div class="social-login">
+          <!-- <a href="#">
+            <i class="fa fa-facebook fa-lg"></i>
+            Login in with facebook
+          </a>
+          <a href="#">
+            <i class="fa fa-google-plus fa-lg"></i>
+            log in with Google
+          </a> -->
+        </div>
+        <form class="email-login" ng-controller="mvNavBarLoginCtrl">
+          <div class="u-form-group">
+            <input type="text" placeholder="username" ng-model="username"/>
+          </div>
+          <div class="u-form-group">
+            <input type="password" placeholder="Password" ng-model="password"/>
+          </div>
+          <div class="u-form-group">
+            <button ng-click="signin(username,password)">Log in</button>
+          </div>
+          <div class="u-form-group">
+            <a href="#" class="forgot-password">Forgot password?</a>
+          </div>
+        </form>
+     </div>
+         </div>
+   </header>
+   
+
+
+
+

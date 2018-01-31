@@ -19,3 +19,8 @@ Home page can view all books in Book Trade Club
  [![Screen_Shot_2018-01-07_at_10.43.00_PM.png](https://s14.postimg.org/j4b7z4uup/Screen_Shot_2018-01-07_at_10.43.00_PM.png)](https://postimg.org/image/bobydc759/)
  
 Book owner can approve or deny other uses request. Once approved or denied, user will receive notification.
+
+
+ 
+
+  
